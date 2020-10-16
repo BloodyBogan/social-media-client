@@ -1,0 +1,37 @@
+.row.page-title {
+  display: block !important;
+  text-align: center;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.doubling.grid > .row,
+  .ui.grid > .doubling.row {
+    padding: 0 !important;
+  }
+
+  h2:first-child {
+    margin-top: 0.625em;
+  }
+}
+
+h1:first-child {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.form-container {
+  max-width: 25rem;
+  margin: auto;
+}
+
+.ui.teal.button:focus,
+.ui.teal.buttons .button:focus {
+  background-color: #00b5ad;
+}
+
+.ui.horizontal.link.list {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+}
