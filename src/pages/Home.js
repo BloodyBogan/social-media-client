@@ -24,7 +24,9 @@ function Home() {
           </Grid.Column>
         )}
         {loading ? (
-          <h1>Loading posts..</h1>
+          <Grid.Column style={{ marginBottom: 40 }}>
+            <h1>Loading posts..</h1>
+          </Grid.Column>
         ) : (
           <Transition.Group>
             {data.getPosts &&
