@@ -15,13 +15,18 @@ function DeleteButton({ postId, commentId, callback }) {
     update(proxy) {
       setConfirmOpen(false);
 
-      if (!commentId) {
+      if (!commentId) {        
         const data = proxy.readQuery({
           query: FETCH_POSTS_QUERY,
         });
 
-        data.getPosts = data.getPosts.filter((post) => post.id !== postId);
-        proxy.writeQuery({ query: FETCH_POSTS_QUERY, data });
+        proxy.writeQuery({
+          query: FETCH_POSTS_QUERY,
+          data: {
+            ...data,
+            getPosts: data.getPosts.filter((post) => post.id !== postId),
+          },
+        });
       }
 
       if (callback) {
