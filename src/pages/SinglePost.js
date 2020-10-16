@@ -85,7 +85,11 @@ function SinglePost(props) {
 
   let postMarkup;
   if (loading) {
-    postMarkup = <p>Loading post..</p>;
+    postMarkup = (
+      <Grid.Column width={12}>
+        <p style={{ textAlign: 'center' }}>Loading post..</p>
+      </Grid.Column>
+    );
   } else {
     const {
       id,
